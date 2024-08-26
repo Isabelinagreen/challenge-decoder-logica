@@ -1,6 +1,7 @@
 # 🌱 Encriptador de Texto 
 
-![Portada del Proyecto](./Pantalla_inicio.png)
+![Portada del Proyecto](./readme/Pantalla_inicio.png)
+![Imagen de Encriptación](./readme/pantalla_encriptacion.png)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/tu-usuario/tu-repositorio?color=%233D405B)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tu-usuario/tu-repositorio?color=%23E07A5F)
