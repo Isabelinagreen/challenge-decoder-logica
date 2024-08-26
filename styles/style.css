@@ -178,16 +178,32 @@ footer {
     .contenedor-principal {
         flex-direction: row;
     }
+}
 
     .titulo, label span {
         font-size: 40px;
     }
-}
 
 /* Estilos para Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
     .contenedor-principal {
         flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+    .sector-izquierdo, .sector-derecho {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+  
+/* Estilos para Celular */
+@media (max-width: 767px) {
+    .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
         padding: 10px;
     }
 
@@ -195,42 +211,36 @@ footer {
         width: 100%;
         height: auto;
         margin-bottom: 20px;
-        padding: 15px;
+    }   
+
+    textarea {
+        font-size: 18px;
+        height: 120px;
     }
 
-    .titulo, label span {
+    button {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .title {
         font-size: 36px;
     }
 
-    #instrucciones, .btn-encriptar, .btn-desencriptar {
+    .input-instruction {
+        font-size: 36px;
+    }
+
+    .text-rule {
+        font-size: 16px;
+    }
+
+    .message {
         font-size: 20px;
     }
-}
 
-/* Estilos para Celular */
-@media (max-width: 767px) {
-    .contenedor-principal {
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .sector-izquierdo, .sector-derecho {
-        width: 100%;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 10px;
-    }
-
-    .titulo, label span {
-        font-size: 28px;
-    }
-
-    #instrucciones, .btn-encriptar, .btn-desencriptar {
-        font-size: 18px;
-    }
-
-    .imagen {
-        width: 100%;
-        height: auto;
+    .copy-btn {
+        font-size: 20px;
+        padding: 8px;
     }
 }
