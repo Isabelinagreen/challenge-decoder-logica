@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <!-- Sector izquierdo con una caja rectangular -->
+        <div class="sector-izquierdo">
+            <header class="header">
+                <!-- Logo de Alura latam -->
+                <img src="./assets/logo_alura.png" alt="Logo de Alura Latam" width="31.09" height="">
+                <!-- Título de la aplicación -->
+                <h1 class="titulo">
+                    <span class="texto-color2">Encriptador de </span>
+                    <span class="texto-color1">Texto</span>
+                </h1>
+            </header>
+
+            <!-- Formulario de entrada de texto -->
+            <form id="formulario">
+                <label for="texto">
+                    <span class="texto-color1">Ingrese el texto </span>
+                    <span class="texto-color2"><strong>aquí</strong></span>
+                </label><br>
+                <textarea id="texto" aria-describedby="instrucciones"></textarea><br>
+                <small id="instrucciones">Solo letras minúsculas, sin acentos, ni caracteres especiales</small><br><br>
+
+                <div class="botones">
+                    <!-- Botones de encriptar y desencriptar -->
+                    <button type="button" onclick="encriptar()" class="btn-encriptar">Encriptar</button>
+                    <button type="button" onclick="desencriptar()" class="btn-desencriptar">Desencriptar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sector derecho: Campo de presentación de mensajes -->
+        <div class="sector-derecho">
+            <div class="campo-presentacion">
+                <!-- Imagen en la parte superior -->
+                <img src="./assets/Muñeco.png" alt="Imagen descriptiva" class="imagen">
+                <!-- Mensaje inicial -->
+                <p class="mensaje-inicial">
+                    Ingrese el texto que desea encriptar o desencriptar
+                </p>
+                <!-- Texto encriptado/desencriptado -->
+                <p id="textoEncriptado"></p>
+                <!-- Botón de copiar y pegar -->
+                <button type="button" onclick="copiarTexto()" class="btn-copiar">Copiar y Pegar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer al final de la página -->
+    <footer>
+        <p>Desarrollado por Maria Isabel Guatame - @isabelinagreen 2024.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

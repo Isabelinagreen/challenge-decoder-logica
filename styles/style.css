@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* Estilo global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #F4F1DE;
+    font-family: 'Krona One', sans-serif;
+    overflow: hidden; /* Ocultar el desbordamiento para prevenir barras de desplazamiento inesperadas */
+}
+
+/* Contenedor principal que divide la pantalla en dos sectores */
+.contenedor-principal {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: calc(100% - 40px); /* Ajustar para que el footer tenga espacio */
+}
+
+/* Sector izquierdo y derecho con altura igual para alineación */
+.sector-izquierdo, .sector-derecho {
+    height: 100%; /* Asegura que ambos sectores tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.sector-izquierdo {
+    width: 50%; /* Ajustar a 50% para mantener la proporcionalidad */
+}
+
+.sector-derecho {
+    width: 40%; /* Ajustar a 40% para mantener la proporcionalidad */
+    background-color: #81B29A;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header con el logo y título */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content:space-evenly;
+}
+
+.header img {
+    margin-right: 20px;
+}
+
+.titulo {
+    font-size: 48px;
+    margin: 0;
+}
+
+.titulo .texto-color1 {
+    color: #E07A5F;
+}
+
+.titulo .texto-color2 {
+    color: #3D405B;
+}
+
+/* Formulario de entrada de texto */
+label span.texto-color1 {
+    color: #E07A5F;
+    font-size: 32px;
+}
+
+label span.texto-color2 {
+    color: #3D405B;
+    font-size: 32px;
+}
+
+#instrucciones {
+    font-size: 12px;
+    color: #3D405B;
+}
+
+textarea#texto {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #3D405B;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden; /* Esconde cualquier desbordamiento de texto */
+    line-height: 1.5; /* Mantiene una línea de espacio */
+    resize: none; /* Deshabilita el ajuste manual del tamaño */
+    min-height: 100px; /* Altura mínima */
+    max-height: 400px; /* Altura máxima */
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+}
+
+.btn-encriptar {
+    background-color: #F2CC8F;
+    color: #3D405B;
+    font-size: 24px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.btn-desencriptar {
+    background-color: #E07A5F;
+    color: #3D405B;
+    font-size: 24px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.imagen {
+    width: 335.98px;
+    height: 304.03px;
+    margin-bottom: 20px;
+}
+
+.mensaje-inicial {
+    color: #3D405B;
+    font-size: 30px;
+}
+
+#textoEncriptado {
+    font-size: 24px;
+    color: #3D405B;
+    display: none;
+}
+
+.btn-copiar {
+    background-color: #F4F1DE;
+    font-family: 'Krona One', sans-serif;
+    color: #3D405B;
+    font-size: 24px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3D405B;
+    color: #F4F1DE;
+    flex-shrink: 0; /* Asegura que el footer no se reduzca */
+    width: 100%;
+}
+
+/* Estilos para Computadora de escritorio (Desktop) */
+@media (min-width: 1024px) {
+    .contenedor-principal {
+        flex-direction: row;
+    }
+
+    .titulo, label span {
+        font-size: 40px;
+    }
+}
+
+/* Estilos para Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contenedor-principal {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sector-izquierdo, .sector-derecho {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .titulo, label span {
+        font-size: 36px;
+    }
+
+    #instrucciones, .btn-encriptar, .btn-desencriptar {
+        font-size: 20px;
+    }
+}
+
+/* Estilos para Celular */
+@media (max-width: 767px) {
+    .contenedor-principal {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .sector-izquierdo, .sector-derecho {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .titulo, label span {
+        font-size: 28px;
+    }
+
+    #instrucciones, .btn-encriptar, .btn-desencriptar {
+        font-size: 18px;
+    }
+
+    .imagen {
+        width: 100%;
+        height: auto;
+    }
+}
