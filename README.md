@@ -1,4 +1,4 @@
-# 🌱 Encriptador de Texto 
+# 🌱 ```Encriptador de Texto```
 
 ![Portada del Proyecto](./readme/Pantalla_inicio.png)
 ![Imagen de Encriptación](./readme/pantalla_encriptacion.png)
